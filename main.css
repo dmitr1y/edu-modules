@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27.06.2016, 14:33:01
+    Author     : aser0
+*/
+
+.header{
+    width: 100%;
+    display: inline-flex;
+    height: 100px;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+
+#content{
+    position: relative;
+    float: left;
+    width: 90%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+iframe{
+    width:90%;
+    height:700px;
+}
+
+.menu{
+    position: relative;
+    float: right;
+    width: 10%;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+.menuPoint{
+    
+}
+
+.logo{
+    font-size: xx-large;
+    padding: 5px;
+    display: block;
+}
+
+.form-signin{
+    /* display: block; */
+    /* position: absolute; */
+    /* float: right; */
+    /* margin-right: 0; */
+}
+
+.container_form-signin{
+    display: flex;
+    flex-flow: right;
+    float: right;
+}
