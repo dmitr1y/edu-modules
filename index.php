@@ -24,7 +24,7 @@ and open the template in the editor.
                 }
                 $link = mysqli_connect('localhost', 'root', '5989613', 'eduModuls');
                 if (!$link) {
-                    print('Не удалось соединиться : ' . mysql_error());
+                    print('Не удалось соединиться : ');
                 } else {
                     print ('База подключена');
                 }
