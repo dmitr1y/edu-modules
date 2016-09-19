@@ -30,9 +30,9 @@ and open the template in the editor.
                 }
                
                 $result = mysqli_query($link,"SELECT * FROM `userTable` WHERE `userLogin` = `admin`");
-              print  $r = mysqli_fetch_array($result);
+//              print  $r = mysqli_fetch_array($result);
 
-                $name = $r['userLogin'];
+//                $name = $r['userLogin'];
               // print $name;
                 
                 ?>
