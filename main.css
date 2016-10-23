@@ -13,48 +13,72 @@ and open the template in the editor.
     display: inline-flex;
     height: 100px;
     justify-content: space-between;
-    background-color: antiquewhite;
+    background-color: #b2c7dc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #content{
     position: relative;
     float: left;
-    width: 90%;
+    width: 100%;
     height: 100%;
+    margin: auto;
     /* background-color: aqua; */
 }
 iframe{
-    width:90%;
+    width:100%;
     height:700px;
+    margin: auto;
 }
 
 .menu{
     position: relative;
-    float: right;
-    width: 10%;
+    /* float: right; */
+    /* width: 10%; */
     height: 100%;
-    background-color: #d6e8e7;
+    background-color: #b2c7dc;
 }
 
 .menuPoint{
+	display: inline-flex;
+}
 
+.menuLi{
+    margin-left: 5px;
+    text-transform: uppercase;
+    /* color: slategray; */
+    margin-right: 25px;
 }
 
 .logo{
     font-size: xx-large;
     padding: 5px;
     display: block;
+    color: blue;
+    /* margin: auto; */
+    margin-left: 20px;
+    margin-top: 30px;
 }
 
 .form-signin{
     /* display: block; */
-    /* position: absolute; */
+    position: absolute;
     /* float: right; */
     /* margin-right: 0; */
 }
 
 .container_form-signin{
-    display: flex;
+    display: block;
     flex-flow: right;
+    position: relative;
     float: right;
 }
+
+.footer{
+
+}
+
+
+
+

@@ -50,21 +50,28 @@ and open the template in the editor.
                 Click here to clean <a href = "logout.php" tite = "Logout">Session.
             </div> <!-- /container -->
         </div>
+<div class="menu">      
+            <!-- menu with modules-->
+            <ul class="menuPoint">
+                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/StrassenVizi/start.html')">StrassenVizi (js)</a></li>
+                <li class="menuLi"><a href="#" onclick="changeSrc('tmp.php?pageNumber=2')">test</a></li>
+                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/ProtocolVisualizer/ProtocolVisualizer.html')">Protocol Visualizer (java)</a></li>
+                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/KIO.files/KIO_index.html')">KIO (flash)</a></li>
+                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/wisetask_linux/')">wisetask (java)</a></li>
+              <!--  <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/')">KIO</a></li>
+                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/')">KIO</a></li>-->
+                <li class="menuLi"><a href="#" onclick="changeSrc('http://localhost:8081/')">discrete-eltech (node js)</a></li>
+                <li class="menuLi">item</li>
+            </ul>
+        </div>
         <div id="content">            
             <!-- content container-->
             <iframe src="intro.html">Требуется поддержка iframe</iframe>
 
         </div>
-
-        <div class="menu">      
-            <!-- menu with moduls-->
-            <ul class="menuPoint">
-                <li><a href="#" onclick="changeSrc('StrassenVizi/start.html')">StrassenVizi</a></li> 
-                <li><a href="#" onclick="changeSrc('tmp.php?pageNumber=2')">test</a></li>
-                <li><a href="#" onclick="changeSrc('ProtocolVisualizer/ProtocolVisualizer.html')">Protocol Visualizer</a></li>
-                <li><a href="#" onclick="changeSrc('discrete-eltech-master/index.js')">discrete-eltech</a></li>
-                <li>item</li>
-            </ul>
-        </div>
+<div class="footer">
+EduModules &#169; 2016
+</div>
+        
     </body>
 </html>
