@@ -81,7 +81,7 @@ and open the template in the editor.
                 <ul>
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/ProtocolVisualizer/')">Визуализатор
                             протоколов</a></li>
-                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/wisetask_linux/')">wisetask
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/wisetask/')">wisetask
                             (java)</a></li>
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/AltExam-v1.0/')">AltExam-v1.0</a>
                     </li>
