@@ -69,7 +69,7 @@ iframe{
 }
 
 .container_form-signin{
-    display: block;
+    display: none;
     flex-flow: right;
     position: relative;
     float: right;

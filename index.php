@@ -88,9 +88,6 @@ and open the template in the editor.
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/Бакаляр-факторизация')">[download] Бакаляр факторизация</a></li>
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/Муравьиный-алгоритм/')">[download] Муравьиный алгоритм</a></li>
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/устный-счет/')">[download] устный счет</a></li>
-                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/')">[download] </a></li>
-                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/')">[download] </a></li>
-                    <li><a href="#">Sub Menu 3</a></li>
                 </ul>
             </li>
             <li><a href="#">Контакты</a>
