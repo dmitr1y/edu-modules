@@ -50,19 +50,54 @@ and open the template in the editor.
                 Click here to clean <a href = "logout.php" tite = "Logout">Session.
             </div> <!-- /container -->
         </div>
-<div class="menu">      
+<div class="menu">
+    <nav id="primary_nav_wrap">
+        <ul>
+            <li class="current-menu-item"><a href="#">Home</a></li>
+                <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                    <li><a href="#">Sub Menu 4</a></li>
+                    <li><a href="#">Sub Menu 5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Онлайн модули</a>
+                <ul>
+                    <li><a href="#" onclick="changeSrc('modules/client/StrassenVizi/start.html')">[OK] StrassenVizi (js)</a></li>
+                    <li><a href="#" onclick="changeSrc('tmp.php?pageNumber=2')">[OK] test</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/KIO.files/KIO_index.html')">[OK] KIO (flash)</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/alternative-exam-gh-pages/index.html')">[OK] поиск взаимно-однозначных соотношений</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/server/posts-lattice-master/public/index.php')">[ERR] замкнутые классы</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/server/discrete-eltech-master/public/')">[ERR] discrete-eltech (node js)</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Офлайн модули</a>
+                <ul>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/ProtocolVisualizer/')">[download,WINDOWS only] Protocol Visualizer (java)</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/wisetask_linux/')">[download] wisetask (java)</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/AltExam-v1.0/')">[download] AltExam-v1.0</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/Ant-Algo/')">[download] Ant-Algo</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/BernsideTheorem/')">[download] BernsideTheorem</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/DM-alt_exam-2016-spies/')">[download] DM-alt_exam-2016-spies</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/lastV/')">[download] lastV</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/Machine_Experiment/')">[download] Machine_Experiment</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/PolynomFactorization/')">[download] PolynomFactorization</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/RSAsys/')">[download] RSAsys</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/Аддитивные-цепочки/')">[download] Аддитивные цепочки</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/АЛГОРИТМ-РАБОТЫ-ЭЛЕКТРОННЫХ-ПЛАТЕЖЕЙ/')">[download] АЛГОРИТМ РАБОТЫ ЭЛЕКТРОННЫХ ПЛАТЕЖЕЙ</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/Бакаляр-факторизация')">[download] Бакаляр факторизация</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/Муравьиный-алгоритм/')">[download] Муравьиный алгоритм</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/устный-счет/')">[download] устный счет</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/')">[download] </a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/')">[download] </a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Контакты</a>
+            </li>
+        </ul>
+    </nav>
             <!-- menu with modules-->
-            <ul class="menuPoint">
-                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/StrassenVizi/start.html')">StrassenVizi (js)</a></li>
-                <li class="menuLi"><a href="#" onclick="changeSrc('tmp.php?pageNumber=2')">test</a></li>
-                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/ProtocolVisualizer/ProtocolVisualizer.html')">Protocol Visualizer (java)</a></li>
-                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/KIO.files/KIO_index.html')">KIO (flash)</a></li>
-                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/wisetask_linux/')">wisetask (java)</a></li>
-              <!--  <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/')">KIO</a></li>
-                <li class="menuLi"><a href="#" onclick="changeSrc('modules/client/')">KIO</a></li>-->
-                <li class="menuLi"><a href="#" onclick="changeSrc('http://localhost:8081/')">discrete-eltech (node js)</a></li>
-                <li class="menuLi">item</li>
-            </ul>
         </div>
         <div id="content">            
             <!-- content container-->
