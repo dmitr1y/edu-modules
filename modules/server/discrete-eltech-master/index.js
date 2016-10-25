@@ -1,5 +1,4 @@
-var cluster;
-cluster = require('cluster');
+var cluster         = require('cluster');
 var os              = require('os');
 var path 			= require('path');
 
@@ -57,7 +56,7 @@ if (cluster.isMaster){
 	passport.use(new GoogleStrategy({
 		    clientID: "513372868036-4l565puo9frjoa3hgva3ovj3s7oohda2.apps.googleusercontent.com",
 		    clientSecret: "nsEQDE87SK0XHprTi60VRLj1",
-		    callbackURL: "http://discrete-eltech.eurodir.ru:8888/auth/google/callback"
+		    callbackURL: "http://discrete-eltech.eurodir.ru:8081/auth/google/callback"
 	  	}, function (accessToken, refreshToken, profile, done) {
 	  		profile.access_token = accessToken;
 	    	done(null, profile)
@@ -180,10 +179,16 @@ if (cluster.isMaster){
 	});
 
 	app.get('/getgroup/:group_id', function(req, res){
-		StudentSchema.find({group: req.params.group_id}, function(err, data){
-			if (err) { console.log(err); res.jsonp([]);}
-			else res.jsonp(data);
-		}).sort({last_name: 1});
+		if (isNaN(req.params.group_id))
+			StudentSchema.find({group: null}, function(err, data){
+				if (err) { console.log(err); res.jsonp([]);}
+				else res.jsonp(data);
+			}).sort({last_name: 1});
+		else
+			StudentSchema.find({group: req.params.group_id}, function(err, data){
+				if (err) { console.log(err); res.jsonp([]);}
+				else res.jsonp(data);
+			}).sort({last_name: 1});
 	});
 
 	app.get('/g/list', (req,res) => {
@@ -205,8 +210,10 @@ if (cluster.isMaster){
 			else {
 				megadata = []
 				for (i = 0; i < data.length; i++)
-					if (data[i]._id != null)
-					megadata.push([data[i]._id, data[i].count])
+					if (data[i]._id == null)
+						megadata.push(["не указана", data[i].count])
+					else
+						megadata.push([data[i]._id, data[i].count])
 				res.jsonp(megadata)
 			}
 		})
