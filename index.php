@@ -103,8 +103,11 @@ and open the template in the editor.
                             БОЛЬШИХ ПРОСТЫХ ЧИСЕЛ</a></li>
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/spies/')">Шпионы</a></li>
                     <li><a href="#"
-                           onclick="changeSrc('modules/client/forDownload/Биометрическая идентификация личности по голосу')">Биометрическая
+                           onclick="changeSrc('modules/client/forDownload/Биометрическая идентификация личности по голосу/')">Биометрическая
                             идентификация личности по голосу</a></li>
+                    <li><a href="#"
+                           onclick="changeSrc('modules/client/forDownload/разложение квадрата натурального числа в цепную дробь/')">Разложение
+                            квадрата натурального числа в цепную дробь</a></li>
                 </ul>
             </li>
             <li><a href="#">Контакты</a>
