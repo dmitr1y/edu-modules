@@ -1,0 +1,43 @@
+.content {
+    /* margin: 0; */
+    width: 100%;
+    /* padding: 0; */
+}
+
+.header {
+    background-color: #b2c7dc;
+    /* height: 60px; */
+    display: block;
+    width: 100%;
+}
+
+.logo {
+    color: blue;
+    /* margin: auto; */
+    /* text-decoration: none; */
+    /* text-transform: uppercase; */
+    line-height: 36px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.info {
+
+}
+
+.download {
+
+}
+
+h2 {
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.spoiler > input + label:after{content: "+";margin-right: 10px;float: left;font-family: monospace;font-weight: bold;}
+.spoiler > input:checked + label:after{content: "-";float: left;margin-right: 10px;font-family: monospace;font-weight: bold;}
+.spoiler > input{display:none;}
+.spoiler > input + label , .spoiler > .spoiler_body{background: #b2c7dc;padding:5px 15px;overflow:hidden;width:100%;box-sizing: border-box;display: block;font-weight: 700;cursor: pointer;}
+.spoiler > input + label + .spoiler_body{display:none;}
+.spoiler > input:checked + label + .spoiler_body{display: block;font-weight: 100;}
+.spoiler > .spoiler_body{background: #FFF;border: 3px solid #b2c7dc;border-top: none;}

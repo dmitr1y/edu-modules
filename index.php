@@ -109,6 +109,7 @@ and open the template in the editor.
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/ГЕНЕРАЦИЯ БОЛЬШИХ ПРОСТЫХ ЧИСЕЛ/')">ГЕНЕРАЦИЯ
                             БОЛЬШИХ ПРОСТЫХ ЧИСЕЛ</a></li>
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/spies/')">Шпионы</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/шахматы/')">Шахматы</a></li>
                 </ul>
             </li>
             <li><a href="#">Контакты</a>
