@@ -54,19 +54,12 @@ and open the template in the editor.
 <div class="menu">
     <nav id="primary_nav_wrap">
         <ul>
-            <li class="current-menu-item"><a href="#">Home</a></li>
-            <ul>
-                <li><a href="#">Sub Menu 1</a></li>
-                <li><a href="#">Sub Menu 3</a></li>
-                <li><a href="#">Sub Menu 4</a></li>
-                <li><a href="#">Sub Menu 5</a></li>
-            </ul>
-            </li>
+            <li class="current-menu-item"><a href="/">Home</a></li>
+
             <li><a href="#">Онлайн модули</a>
                 <ul>
                     <li><a href="#" onclick="changeSrc('modules/client/StrassenVizi/start.html')">[OK] StrassenVizi
                             (js)</a></li>
-                    <li><a href="#" onclick="changeSrc('tmp.php?pageNumber=2')">[OK] test</a></li>
                     <li><a href="#" onclick="changeSrc('modules/client/KIO.files/KIO_index.html')">[OK] KIO (flash)</a>
                     </li>
                     <li><a href="#" onclick="changeSrc('modules/client/alternative-exam-gh-pages/index.html')">[OK]
