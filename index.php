@@ -58,16 +58,17 @@ and open the template in the editor.
 
             <li><a href="#">Онлайн модули</a>
                 <ul>
-                    <li><a href="#" onclick="changeSrc('modules/client/StrassenVizi/start.html')">[OK] StrassenVizi
+                    <li><a href="#" onclick="changeSrc('modules/client/StrassenVizi/start.html')">Визуализатор алгоритма
+                            Штрассена
                             (js)</a></li>
-                    <li><a href="#" onclick="changeSrc('modules/client/KIO.files/KIO_index.html')">[OK] KIO (flash)</a>
+                    <li><a href="#" onclick="changeSrc('modules/client/KIO.files/KIO_index.html')">Data Mining</a>
                     </li>
-                    <li><a href="#" onclick="changeSrc('modules/client/alternative-exam-gh-pages/index.html')">[OK]
-                            поиск взаимно-однозначных соотношений</a></li>
-                    <li><a href="#" onclick="changeSrc('http://xn--80atdza4d.xn--80aqijq.xn--p1ai/')">[ERR]
-                            замкнутые классы</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/alternative-exam-gh-pages/index.html')">
+                            Тренажёр поиска взаимно-однозначных соотношений</a></li>
+                    <li><a href="#" onclick="changeSrc('http://xn--80atdza4d.xn--80aqijq.xn--p1ai/')">Замкнутые классы
+                            булевых функций</a></li>
                     <li><a href="#" onclick="changeSrc('http://edumodules.ru:8081/')">[ERR]
-                            discrete-eltech (node js)</a></li>
+                            Тренажёр на алгоритм Евклида и связанные с ним задачи</a></li>
                 </ul>
             </li>
             <li><a href="#">Офлайн модули</a>
@@ -76,11 +77,15 @@ and open the template in the editor.
                             протоколов</a></li>
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/wisetask/')">wisetask
                             (java)</a></li>
-                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/AltExam-v1.0/')">AltExam-v1.0</a>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/AltExam-v1.0/')">Компьютерная система
+                            для работы с длинными числами, представленными своими остатками</a>
                     </li>
-                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/Ant-Algo/')">Ant-Algo</a></li>
+                    <li><a href="#" onclick="changeSrc('modules/client/forDownload/Ant-Algo/')">Визуализация решения
+                            задачи Коммивояжера с помощью муравьиного алгоритма</a></li>
                     <li><a href="#"
-                           onclick="changeSrc('modules/client/forDownload/BernsideTheorem/')">BernsideTheorem</a></li>
+                           onclick="changeSrc('modules/client/forDownload/BernsideTheorem/')">Вычисление всех
+                            геометрически различных раскрасок правильных многогранников/многоугольников с использованием
+                            Теоремы Бернсайда </a></li>
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/DM-alt_exam-2016-spies/')">DM-alt_exam-2016-spies</a>
                     </li>
                     <li><a href="#" onclick="changeSrc('modules/client/forDownload/lastV/')">lastV</a></li>

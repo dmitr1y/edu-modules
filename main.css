@@ -13,9 +13,13 @@ and open the template in the editor.
     display: inline-flex;
     height: 100px;
     justify-content: space-between;
-    background-color: #b2c7dc;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    background-color: rgba(108, 179, 243, 0.5);
+    /*border-top-left-radius: 10px;*/
+    /*border-top-right-radius: 10px;*/
+    border-radius: 2px;
+    -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54);
+    box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54);
 }
 
 #content{
@@ -37,7 +41,7 @@ iframe{
     /* float: right; */
     /* width: 10%; */
     height: 100%;
-    background-color: #b2c7dc;
+    /* background-color: #b2c7dc; */
 }
 
 .menuPoint{
@@ -55,7 +59,7 @@ iframe{
     font-size: xx-large;
     padding: 5px;
     display: block;
-    color: blue;
+    color: #00284c;
     /* margin: auto; */
     margin-left: 20px;
     margin-top: 30px;
@@ -95,13 +99,13 @@ iframe{
 #primary_nav_wrap ul a
 {
     display:block;
-    color:#333;
+    color: #00284c;
     text-decoration:none;
     font-weight:700;
     font-size:12px;
     line-height:32px;
     padding:0 15px;
-    font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #primary_nav_wrap ul li
@@ -114,12 +118,15 @@ iframe{
 
 #primary_nav_wrap ul li.current-menu-item
 {
-    background:#ddd
+    background: #b6d9f9;
+    border-radius: 1px;
+    /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);*/
 }
 
 #primary_nav_wrap ul li:hover
 {
-    background:#f6f6f6
+    background: rgb(216, 236, 255);
+    /* color: aquamarine; */
 }
 
 #primary_nav_wrap ul ul
