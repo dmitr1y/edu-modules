@@ -65,7 +65,9 @@ and open the template in the editor.
                     </li>
                     <li><a href="#" onclick="changeSrc('modules/client/alternative-exam-gh-pages/index.html')">
                             Тренажёр поиска взаимно-однозначных соотношений</a></li>
-                    <li><a href="#" onclick="changeSrc('http://xn--80atdza4d.xn--80aqijq.xn--p1ai/')">Замкнутые классы
+                    <!--<li><a href="#" onclick="changeSrc('http://xn--80atdza4d.xn--80aqijq.xn--p1ai/')">Замкнутые классы
+                            булевых функций</a></li>-->
+                    <li><a href="#" onclick="changeSrc('modules/server/boolean/public/index.php')">Замкнутые классы
                             булевых функций</a></li>
                     <li><a href="#" onclick="changeSrc('http://edumodules.ru:8081/')">[ERR]
                             Тренажёр на алгоритм Евклида и связанные с ним задачи</a></li>
