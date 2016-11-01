@@ -45,7 +45,7 @@ and open the template in the editor.
             <input type="password" class="form-control"
                    name="password" placeholder="password = admin" required>
             <button class="btn btn-lg btn-primary btn-block" type="submit"
-                    name="login">Login
+                    name="login">Register
             </button>
         </form>
         Click here to clean <a href="logout.php" tite="Logout">Session.
