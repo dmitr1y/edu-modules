@@ -1,29 +1,25 @@
 /**
  * Created by dmitriy on 06.12.16.
  */
-var h_hght = 143; // высота шапки
-var h_mrg = 0;    // отступ когда шапка уже не видна
-
-$(function(){
-
-    var elem = $('.menu');
-    var top = $(this).scrollTop();
-
-    if(top > h_hght){
-        elem.css('top', h_mrg);
-    }
+$(document).ready(function(){
+    var iframe = $('#content_frame', parent.document.body);
+    iframe.height($(document.body).height());
+    var $menu = $("#menu");
 
     $(window).scroll(function(){
-        top = $(this).scrollTop();
-
-        if (top+h_mrg < h_hght) {
-            elem.css('top', (h_hght-top));
-        } else {
-            elem.css('top', h_mrg);
+        if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+            $menu.fadeOut('fast',function(){
+                $(this).removeClass("default")
+                    .addClass("fixed transbg")
+                    .fadeIn('fast');
+            });
+        } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+            $menu.fadeOut('fast',function(){
+                $(this).removeClass("fixed transbg")
+                    .addClass("default")
+                    .fadeIn('fast');
+            });
         }
     });
-
 });
-
-
 
