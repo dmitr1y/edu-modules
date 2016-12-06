@@ -141,7 +141,7 @@ a, li {
     transform: scale(0);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
-    background-color: white;
+    background-color: #0d47a1;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
 .drop ul li {
@@ -172,6 +172,4 @@ a, li {
     position:fixed;
     top: -10px;
     margin: 0;
-    /* left:0; */
-    /* width:100%; */
 }
