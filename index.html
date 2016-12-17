@@ -66,13 +66,14 @@ and open the template in the editor.
 
 
 </script>
-<div id="content">
+<!--<div id="content">-->
     <!-- content container-->
-    <iframe id="content_frame" src="intro.html">Требуется поддержка iframe</iframe>
+    <iframe id="content_frame" src="intro.html" onload="iframeLoaded(this.id)">Требуется поддержка iframe</iframe>
 
-</div>
+<!--</div>-->
 <div class="footer">
-    EduModules &#169; 2016
+
+ <div class="footer_logo">EduModules &#169; 2016</div>
 </div>
 
 </body>
