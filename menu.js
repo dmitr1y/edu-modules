@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+var modules=['modules/client/StrassenVizi/start.html'];
 
-function changeSrc (url)
+function changeIFrameSrc (url)
 {
     document.getElementById('content_frame').src=url;
-    // console.log("redicreting:"+url);
+}
+
+function gotoModuleWindow(url) {
+    window.location.href=url;
 }
 
 function getDocHeight(doc) {
     doc = doc || document;
-    // stackoverflow.com/questions/1145850/
     var body = doc.body, html = doc.documentElement;
     var height = Math.max( body.scrollHeight, body.offsetHeight,
         html.clientHeight, html.scrollHeight, html.offsetHeight );
@@ -28,7 +31,4 @@ function iframeLoaded(id) {
     // IE opt. for bing/msn needs a bit added or scrollbar appears
     ifrm.style.height = getDocHeight( doc ) + 20 + "px";
     ifrm.style.visibility = 'visible';
-       // console.log("scrollHeight="+ifrm.height);
-        console.log("iframeHeight="+ifrm.height);
-  //      console.log("div content height="+content.height);
 }
