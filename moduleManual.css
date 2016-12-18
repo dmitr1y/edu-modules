@@ -1,37 +1,83 @@
+body{
+    margin: 0;
+    top: 0;
+    background: #bbdefb;
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+ul{
+    padding:0;
+}
+li{
+    margin-top:5px;
+    list-style-type:none;
+}
+
+.sys-req{
+    /*border:1px;*/
+    /*border-style:solid;*/
+    padding:0.5em;
+    /*border-color:#2196f3;*/
+}
+
 .content {
-    width: 100%;
+    width: 90%;
+    /* height: 100%; */
+    margin: auto;
+    position: relative;
+    padding: 0;
+/*     top: 0; */
+/*     left: 0; */
 }
 
 .header {
     width: 100%;
-    display: block;
+    margin: 0;
+    top: 0;
+    /* display: block; */
     min-height: 60px;
-    justify-content: space-between;
-    background-color: rgba(108, 179, 243, 0.5);
-    border-radius: 2px;
-    -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54);
+    /* justify-content: space-between; */
+    background-color: #2196F3;
+    /* padding: 5px; */
+    /* border-radius: 2px; */
+    /* -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54); */
     -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54);
-    box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54);
+    /* box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54); */
 }
 
 .logo {
-    color: #00284c;
+    color: white;
     line-height: 36px;
     padding: 5px;
-    margin-left: 10px;
+    position: relative;
+    /* margin-left: 10px; */
+    margin: auto;
 }
 
 .info {
-
-}
+    width: 100%;
+    }
 
 .download {
-
+    list-style-type: none;
+    /* height: 1.5em; */
+    padding: 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+/*     width: 100%; */
+    /* left: 0; */
+    /*border-width: 1px;*/
+    margin:5px;
+    /* margin: 0; */
+/*     border-style: solid; */
+    /*border-color: #2196f3;*/
+    /*background-color:#E3F2FD;*/
 }
 
-h2 {
-    text-decoration: underline;
-    margin-left: 5px;
+.download:hover{
+    /*border-color:#1565C0;*/
+    /*color:white;*/
+    /*background-color:#BBDEFB;*/
 }
 
 .spoiler > input + label:after {
@@ -55,14 +101,14 @@ h2 {
 }
 
 .spoiler > input + label, .spoiler > .spoiler_body {
-    background: #b6d9f9;
+    background: #ffffff;
     padding: 5px 15px;
     overflow: hidden;
-    color: #00284c;
+    color: black;
     width: 100%;
     box-sizing: border-box;
     display: block;
-    font-weight: 700;
+/*     font-weight: 700; */
     cursor: pointer;
 }
 
@@ -76,7 +122,39 @@ h2 {
 }
 
 .spoiler > .spoiler_body {
-    background: #FFF;
-    border: 3px solid #b2c7dc;
+    background: #fff;
+/*     border: 3px solid #b2c7dc; */
     border-top: none;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #0D47A1;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+h2{
+    background-color: #1976D2;
+    padding: 0.3em;
+    margin: 0;
+    margin-top: 10px;
+    /* color:#0D47A1; */
+    color: white;
+}
+
+p{/* padding:10px; */padding-left: 10px;padding-right: 10px;}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  width: 100%;
+  display: inline-block;
+  /*margin: 1rem;*/
+  margin-top: 0;
+  /* position: relative; */
+  /*   width: 100%; */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
