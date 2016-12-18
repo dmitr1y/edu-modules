@@ -3,8 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var modules=['modules/client/StrassenVizi/start.html'];
-
 function changeIFrameSrc (url)
 {
     document.getElementById('content_frame').src=url;

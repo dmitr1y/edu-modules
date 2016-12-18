@@ -7,8 +7,13 @@ and open the template in the editor.
     Created on : 27.06.2016, 14:33:01
     Author     : aser0
 */
+
+html{
+    font-family: "Roboto", sans-serif;
+}
+
 body{
-    background-color: #FAFAFA;
+    background-color: #bbdefb;
     margin: 0;
 }
 
@@ -60,7 +65,8 @@ iframe{
 }
 
 .logo{
-    font-size: xx-large;
+    /* font-size: xx-large; */
+    font-size: 2.5em;
     padding: 5px;
     display: block;
     color: white;
