@@ -9,7 +9,7 @@ RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 ADD default /etc/nginx/sites-enabled/
 
-RUN git clone https://github.com/dmitr1y/StrassenVizi.git /www
+RUN git clone https://github.com/dmitr1y/edu-modules.git /www
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 EXPOSE 80
