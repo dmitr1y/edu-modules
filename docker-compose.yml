@@ -1,19 +1,17 @@
 version: "2"
 
 services:
- strassen:
-  build: ./StrassenVizi/
-  environment:
-  - VIRTUAL_HOST=strassen.eltech.localhost
+  strassen:
+    build: ./strassen/
+    environment:
+                - VIRTUAL_HOST=strassen.eltech.localhost
 
- eltech:
-  build: ./eltech/
-  environment: 
-  - VIRTUAL_HOST=eltech.localhost
+  eltech:
+    build: ./eltech/
+    environment:
+                - VIRTUAL_HOST=eltech.localhost
 
 networks:  
   default:
     external:
       name: nginx-proxy
-
-
