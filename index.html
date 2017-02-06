@@ -6,37 +6,25 @@ and open the template in the editor.
 -->
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta charset="UTF-8">
-    <script src="jquery-3.1.1.min.js"></script>
-    <script src="header.js"></script>
-    <script src="menu.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/menu.js"></script>
     <title>Edu modules</title>
 </head>
 <body>
-
-
-<div class="header">
-    <div class="logo">EduModules</div>
-    <div id="menu" class="default">
-        <ul class="nav">
-            <li><a href="http://students.ipo.spb.ru/">Главная</a></li>
-            <li onclick="changeIFrameSrc('online_modules.html')">Онлайн модули</li>
-            <li onclick="changeIFrameSrc('offline_modules.html')">Оффлайн модули</li>
-            <li><a href=#>Контакты</a></li>
-        </ul>
-    </div>
+<!--<div class="header">-->
+<div id="menu" class="default">
+    <!--<div class="logo">EduModules</div>-->
+    <ul class="nav">
+        <li><a href="http://students.ipo.spb.ru/">Главная</a></li>
+        <li onclick="changeIFrameSrc('online_modules.html')">Онлайн модули</li>
+        <li onclick="changeIFrameSrc('offline_modules.html')">Оффлайн модули</li>
+        <li><a href=#>Контакты</a></li>
+    </ul>
 </div>
-
-<script type="text/javascript">
-
-
-</script>
-    <iframe id="content_frame" src="intro.html" onload="iframeLoaded(this.id)">Требуется поддержка iframe</iframe>
-<div class="footer">
-
- <div class="footer_logo">EduModules &#169; 2016</div>
-</div>
-
+<!--</div>-->
+<iframe id="content_frame" src="intro.html" scrolling="auto" onload="resizeIframe()">Требуется поддержка iframe</iframe>
 </body>
 </html>
