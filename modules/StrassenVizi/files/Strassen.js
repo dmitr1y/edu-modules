@@ -2,7 +2,7 @@
  Author     : Konstantinov Dmitrii
  e-mail: aser00707@ya.ru
  */
-var SIZE = 1, NormSize = 1;
+var SIZE = 8, NormSize = 1, MAXSIZE = 128; //Выше значения MAXSIZE канвас не может вывести изображения из-за слишком большого размера
 var arr1 = null, arr2 = null, result = null;
 
 var colorA = {
@@ -39,19 +39,18 @@ function Matrix(array, color) {
     return this;
 }
 
-function Initial()
-{
+function Initial() {
     document.getElementById("SizeInput").value = SIZE;
-    SIZE = 8;
-
     RandMatrix();
 }
-function ReadSize()
-{
+function ReadSize() {
     var SizeInput = document.getElementById("SizeInput");
     var tmp = SizeInput.value;
     if (tmp && isInt(tmp) && tmp > 0) {
-        SIZE = tmp;
+        if (tmp > MAXSIZE)
+            alert("Слишком большой размер");
+        else
+            SIZE = tmp;
     } else {
         alert("Bad size");
     }
@@ -60,8 +59,7 @@ function ReadSize()
 function isInt(n) {
     return n % 1 === 0;
 }
-function startStrassen()
-{
+function startStrassen() {
     NormSize = 1;
     var divContent = document.getElementById("content"), divP = document.getElementById("Steps");
     divContent.style.display = divP.style.display = 'block';
@@ -85,9 +83,9 @@ function startStrassen()
 function randMatrixArray(size)
 //генерация случайной матрицы
 {
-    var arr = new Array();
+    var arr = [];
     for (var i = 0; i < size; i++) {
-        arr[i] = new Array();
+        arr[i] = [];
         for (var j = 0; j < size; j++) {
             arr[i][j] = Math.floor(Math.random() * (11 + 10) - 10) + 1;
         }
@@ -95,8 +93,7 @@ function randMatrixArray(size)
     return arr;
 }
 
-function wrapText(context, arr, marginLeft, marginTop, lineHeight, color)
-{
+function wrapText(context, arr, marginLeft, marginTop, lineHeight, color) {
     var left = marginLeft;
     var top = marginTop;
     var line = "";
@@ -124,8 +121,7 @@ function wrapText(context, arr, marginLeft, marginTop, lineHeight, color)
 
 }
 
-function wrapSign(context, marginLeft, marginTop, sign)
-{
+function wrapSign(context, marginLeft, marginTop, sign) {
     context.beginPath();
     context.font = "16pt Arial";
     context.fillStyle = "#000";
@@ -139,21 +135,20 @@ function ShowMainMatrix(arr1, arr2, arr3, out)
     var context = canvas.getContext("2d");
     context.clearRect(0, 0, 12 * arr1.length, 20 * arr1.length);
     canvas.width = (24 * arr1.length + 40) * 3;
-    canvas.height = 12 * arr1.length+6;
+    canvas.height = 12 * arr1.length + 6;
     var lineHeight = 12;
     var marginTop = 12;
     context.font = "8pt Arial";
     context.fillStyle = "#000";
     wrapText(context, arr1, 6, marginTop, lineHeight, colorA);
-    wrapMatrixBrackets(context, 24 * arr1.length, 12 * arr1.length - marginTop+3, 0, 2);
+    wrapMatrixBrackets(context, 24 * arr1.length, 12 * arr1.length - marginTop + 3, 0, 2);
     wrapText(context, arr2, 24 * arr1.length + 46, marginTop, lineHeight, colorB);
-    wrapMatrixBrackets(context, 24 * arr1.length, 12 * arr1.length - marginTop+3, 23 * arr1.length + 46, 2);
+    wrapMatrixBrackets(context, 24 * arr1.length, 12 * arr1.length - marginTop + 3, 24 * arr1.length + 40, 2);
     wrapText(context, arr3, 24 * arr1.length * 2 + 82, marginTop, lineHeight, colorC);
-    wrapMatrixBrackets(context, 24 * arr1.length, 12 * arr1.length - marginTop+3, (24 * arr1.length + 40)*2, 2);
+    wrapMatrixBrackets(context, 24 * arr1.length, 12 * arr1.length - marginTop + 3, (24 * arr1.length + 40) * 2, 2);
 }
 
-function wrapMatrix(context, matrix, marginLeft, marginTop, lineHeight)
-{
+function wrapMatrix(context, matrix, marginLeft, marginTop, lineHeight) {
     context.beginPath();
     var left = marginLeft;
     var top = marginTop + 7;
@@ -173,8 +168,7 @@ function wrapMatrix(context, matrix, marginLeft, marginTop, lineHeight)
     wrapMatrixBrackets(context, sizeX, sizeY, marginLeft, marginTop - 7);
 }
 
-function wrapBracket(context, startPosX, startPosY, height, inverse)
-{
+function wrapBracket(context, startPosX, startPosY, height, inverse) {
     context.beginPath();
     context.lineWidth = 2;
     height += 5;
@@ -192,14 +186,12 @@ function wrapBracket(context, startPosX, startPosY, height, inverse)
     context.stroke();
 }
 
-function wrapMatrixBrackets(context, matrixWidth, matrixHeight, marginLeft, marginTop)
-{
+function wrapMatrixBrackets(context, matrixWidth, matrixHeight, marginLeft, marginTop) {
     wrapBracket(context, marginLeft, marginTop, matrixHeight, 0);
     wrapBracket(context, marginLeft + matrixWidth, marginTop, matrixHeight, 1);
 }
 
-function ShowPMatrix(P1, P2, P3, P4, P5, P6, P7, A11, A12, A21, A22, B11, B12, B21, B22, C1, C2, C3, C4)
-{
+function ShowPMatrix(P1, P2, P3, P4, P5, P6, P7, A11, A12, A21, A22, B11, B12, B21, B22, C1, C2, C3, C4) {
     var canvas = document.getElementById("canvasP");
     var context = canvas.getContext("2d");
     context.clearRect(0, 0, 12 * arr1.length, 20 * arr1.length);
@@ -238,8 +230,7 @@ function ShowPMatrix(P1, P2, P3, P4, P5, P6, P7, A11, A12, A21, A22, B11, B12, B
 }
 
 
-function wrapLine(context, x, y, width)
-{
+function wrapLine(context, x, y, width) {
     context.beginPath();
     context.lineWidth = 4;
     context.moveTo(x, y);
@@ -250,19 +241,18 @@ function wrapLine(context, x, y, width)
 function DiscreteMatrix(A, startI, startJ, endI, endJ)
 //деление матрицы на 4 части
 {
-    var subA = new Array();
+    var subA = [];
     size = A.length;
-    if (size > 2)
-    {
+    if (size > 2) {
         for (var i = startI, k = 0; i < endI; k++, i++) {
-            subA[k] = new Array();
+            subA[k] = [];
             for (var j = startJ, g = 0; j < endJ; g++, j++) {
                 subA[k][g] = A[i][j];
             }
         }
     }
     if (size === 2) {
-        subA[0] = new Array();
+        subA[0] = [];
         subA[0][0] = A[startI][startJ];
     }
     if (size < 2) {
@@ -279,25 +269,15 @@ function strassen(A11, A12, A21, A22, B11, B12, B21, B22)
     var C;
     P1 = new Matrix(multi(summ(A11.array, A22.array), summ(B11.array, B22.array)), colorP.color1);
     P2 = new Matrix(multi(summ(A21.array, A22.array), B11.array), colorP.color2);
-    ;
     P3 = new Matrix(multi(A11.array, diff(B12.array, B22.array)), colorP.color3);
-    ;
     P4 = new Matrix(multi(A22.array, diff(B21.array, B11.array)), colorP.color4);
-    ;
     P5 = new Matrix(multi(summ(A11.array, A12.array), B22.array), colorP.color5);
-    ;
     P6 = new Matrix(multi(diff(A21.array, A11.array), summ(B11.array, B12.array)), colorP.color6);
-    ;
     P7 = new Matrix(multi(diff(A12.array, A22.array), summ(B21.array, B22.array)), colorP.color7);
-    ;
     C1 = new Matrix(summ(P1.array, summ(P7.array, diff(P4.array, P5.array))), colorC.color1);
-    ;
     C2 = new Matrix(summ(P3.array, P5.array), colorC.color2);
-    ;
     C3 = new Matrix(summ(P2.array, P4.array), colorC.color3);
-    ;
     C4 = new Matrix(summ(diff(P1.array, P2.array), summ(P3.array, P6.array)), colorC.color4);
-    ;
     if (C1.array.length === (SIZE / 2) | C1.array.length === (NormSize / 2)) {
         ShowPMatrix(P1, P2, P3, P4, P5, P6, P7, A11, A12, A21, A22, B11, B12, B21, B22, C1, C2, C3, C4);
     }
@@ -308,17 +288,17 @@ function strassen(A11, A12, A21, A22, B11, B12, B21, B22)
 function summ(A, B)
 //cумма матриц
 {
-    var C = new Array();
+    var C = [];
     if (A.length > 1 && B.length > 1) {
 
         for (var i = 0; i < A.length; i++) {
-            C[i] = new Array();
+            C[i] = [];
             for (var j = 0; j < A.length; j++) {
                 C[i][j] = A[i][j] + B[i][j];
             }
         }
     } else {
-        C[0] = new Array();
+        C[0] = [];
         C[0][0] = A[0][0] + B[0][0];
     }
     return C;
@@ -327,17 +307,17 @@ function summ(A, B)
 function diff(A, B)
 //разность матриц
 {
-    var C = new Array();
+    var C = [];
     if (A.length > 1 && B.length > 1) {
 
         for (var i = 0; i < A.length; i++) {
-            C[i] = new Array();
+            C[i] = [];
             for (var j = 0; j < A.length; j++) {
                 C[i][j] = A[i][j] - B[i][j];
             }
         }
     } else {
-        C[0] = new Array();
+        C[0] = [];
         C[0][0] = A[0][0] - B[0][0];
         //  console.log(C[0][0]);
     }
@@ -361,8 +341,8 @@ function multi(A, B)
         B22 = new Matrix(DiscreteMatrix(B, B.length / 2, B.length / 2, B.length, B.length), colorB.color4);
         C = strassen(A11, A12, A21, A22, B11, B12, B21, B22);
     } else {
-        C = new Array();
-        C[0] = new Array();
+        C = [];
+        C[0] = [];
         C[0][0] = A[0][0] * B[0][0];
     }
     return C;
@@ -372,9 +352,9 @@ function compileMatrix(A1, A2, A3, A4)
 //сбор матрицы из четырех частей
 {
     var size = A1.length * 2;
-    var result = new Array();
+    var result = [];
     for (var i = 0, k = 0; i < size / 2; k++, i++) {
-        result[i] = new Array();
+        result[i] = [];
         for (var j = 0, g = 0; j < size / 2; g++, j++) {
             result[i][j] = A1[k][g];
         }
@@ -385,7 +365,7 @@ function compileMatrix(A1, A2, A3, A4)
         }
     }
     for (var i = size / 2, k = 0; i < size; k++, i++) {
-        result[i] = new Array();
+        result[i] = [];
         for (var j = 0, g = 0; j < size / 2; g++, j++) {
             result[i][j] = A3[k][g];
         }
@@ -408,8 +388,7 @@ function AddTo2Matrix(arr, size)
 //расширение матрицы до размера степени двойки
 {
     var tmp = size, count = 0;
-    while (tmp >= 2)
-    {
+    while (tmp >= 2) {
         tmp = tmp >> 1;
         count++;
     }
@@ -420,23 +399,21 @@ function AddTo2Matrix(arr, size)
         }
     }
     for (var i = size; i < NormSize; i++) {
-        arr[i] = new Array();
+        arr[i] = [];
         for (var j = 0; j < NormSize; j++) {
             arr[i][j] = 0;
         }
     }
     return arr;
 }
-function RandMatrix()
-{
+function RandMatrix() {
     result = DeleteArray(result);
     arr1 = randMatrixArray(SIZE);
     arr2 = randMatrixArray(SIZE);
     ShowMainScreen();
 }
 function DecrementSize() {
-    if (SIZE > 1)
-    {
+    if (SIZE > 1) {
         SIZE--;
         document.getElementById("SizeInput").value = SIZE;
     }
@@ -445,8 +422,7 @@ function IncrementSize() {
     SIZE++;
     document.getElementById("SizeInput").value = SIZE;
 }
-function Reset()
-{
+function Reset() {
     document.getElementById("content").style.display = document.getElementById("Steps").style.display = 'none';
     arr1 = DeleteArray(arr1);
     arr2 = DeleteArray(arr2);
@@ -477,10 +453,8 @@ function CreateInputs(form, name) {
     form.appendChild(table);
 }
 
-function SetInputMatrix(InputName, arr)
-{
-    if (arr)
-    {
+function SetInputMatrix(InputName, arr) {
+    if (arr) {
         var size = 1;
         if (arr.length < SIZE) {
             size = arr.length;
@@ -502,13 +476,11 @@ function SetInputMatrix(InputName, arr)
                 document.getElementById(InputName + '_' + i + '_' + j).value = 0;
             }
         }
-    } else
-    {
+    } else {
         SetNullInputMatrix(InputName);
     }
 }
-function SetNullInputMatrix(InputName)
-{
+function SetNullInputMatrix(InputName) {
     for (var i = 0; i < SIZE; i++) {
         for (var j = 0; j < SIZE; j++) {
             document.getElementById(InputName + '_' + i + '_' + j).value = 0;
@@ -516,14 +488,12 @@ function SetNullInputMatrix(InputName)
     }
 }
 
-function ClearInputs()
-{
+function ClearInputs() {
     CreateInputs(document.getElementById("matrixA"), "A");
     CreateInputs(document.getElementById("matrixB"), "B");
 }
 
-function ReadInput(InputName, arr)
-{
+function ReadInput(InputName, arr) {
     if (!arr) {
         arr = new Array(SIZE);
         for (var i = 0; i < SIZE; i++) {
@@ -543,14 +513,13 @@ function ReadInput(InputName, arr)
     return arr;
 }
 
-function InputMatrix()
-{
+function InputMatrix() {
     document.getElementById("SizeManageMain").style.display =
-            document.getElementById("Steps").style.display =
+        document.getElementById("Steps").style.display =
             document.getElementById("canvasTOP").style.display =
-            document.getElementById("Operations").style.display = 'none';
+                document.getElementById("Operations").style.display = 'none';
     document.getElementById("SizeManageInput").style.display = 'inline-block';
-    document.getElementById("content").style.display = document.getElementById("ApplyMatrix").style.display = 'block';
+    document.getElementById("content").style.display = document.getElementById("InputMenu").style.display = 'block';
     document.getElementById("matrixA").style.display = 'inline-block';
     document.getElementById("matrixB").style.cssText = 'display:inline-block ;margin-left:3%';
     CreateInputs(document.getElementById("matrixA"), "A");
@@ -559,35 +528,28 @@ function InputMatrix()
     SetInputMatrix("B", arr2);
 }
 
-function ShowMainScreen()
-{
+function ShowMainScreen() {
     document.getElementById("SizeManageInput").style.display =
-            document.getElementById("matrixA").style.display =
+        document.getElementById("matrixA").style.display =
             document.getElementById("matrixB").style.display =
-            document.getElementById("ApplyMatrix").style.display = 'none';
+                document.getElementById("InputMenu").style.display = 'none';
     document.getElementById("content").style.display =
-            document.getElementById("canvasTOP").style.display = 'block';
+        document.getElementById("canvasTOP").style.display = 'block';
     document.getElementById("SizeManageMain").style.display = 'inline-block';
     document.getElementById("Operations").style.display = 'block';
     startStrassen();
 }
 
-function ApplyInput()
-{
+function ApplyInput() {
     arr1 = DeleteArray(arr1);
     arr2 = DeleteArray(arr2);
     result = DeleteArray(result);
     arr1 = ReadInput("A", arr1);
     arr2 = ReadInput("B", arr2);
     ShowMainScreen();
-    var outA = document.getElementById("matrixA"),
-            outB = document.getElementById("matrixB");
-    ShowColorMatrix(arr1, outA, "A", colorA11, colorA12, colorA21, colorA22);
-    ShowColorMatrix(arr2, outB, "B", colorB11, colorB12, colorB21, colorB22);
 }
 
-function DeleteArray(arr)
-{
+function DeleteArray(arr) {
     if (arr) {
         for (var i = 0; i < arr.length; i++) {
             delete arr[i];
@@ -607,14 +569,12 @@ function DecrementSizeInput() {
     InputMatrix();
 }
 
-function ReadSizeInput()
-{
+function ReadSizeInput() {
     ReadSize();
     InputMatrix();
 }
 
-function NaNtoInt(arr)
-{
+function NaNtoInt(arr) {
     if (arr) {
         for (var i = 0; i < arr.length; i++) {
             for (var j = 0; j < arr.length; j++) {
@@ -627,13 +587,13 @@ function NaNtoInt(arr)
 
 function DisplBrackets(flag, ClassName, size) {
     var divs = document.getElementsByTagName("DIV");
-    var param;
-    if (flag === 1) {
-        param = 'block';
-    }
-    if (flag === 0) {
-        param = 'none';
-    }
+    // var param;
+    // if (flag === 1) {
+    //     param = 'block';
+    // }
+    // if (flag === 0) {
+    //     param = 'none';
+    // }
     if (!size) {
         size = arr1.length > SIZE ? arr1.length : SIZE;
         if (size < NormSize) {
