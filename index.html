@@ -14,17 +14,15 @@ and open the template in the editor.
     <title>Edu modules</title>
 </head>
 <body>
-<!--<div class="header">-->
 <div id="menu" class="default">
-    <!--<div class="logo">EduModules</div>-->
-    <ul class="nav">
+    <div class="logo">EduModules</div>
+    <ul class="nav" id="ul-main-menu">
         <li><a href="http://students.ipo.spb.ru/">Главная</a></li>
         <li onclick="changeIFrameSrc('online_modules.html')">Онлайн модули</li>
         <li onclick="changeIFrameSrc('offline_modules.html')">Оффлайн модули</li>
         <li><a href=#>Контакты</a></li>
     </ul>
 </div>
-<!--</div>-->
 <iframe id="content_frame" src="intro.html" scrolling="auto" onload="resizeIframe()">Требуется поддержка iframe</iframe>
 </body>
 </html>
