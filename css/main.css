@@ -14,7 +14,6 @@ body {
     padding: 0;
     top: 0;
     bottom: 0;
-    /* font-family: Tahoma; */
     overflow: hidden;
 }
 
@@ -46,9 +45,6 @@ iframe {
     padding: 0.4em 0 0 0.5em;
     width: 6em;
     color: white;
-    /* background-color: rgba(255, 255, 255, 0.38); */
-    /* overflow: hidden; */
-    /* height: 50px; */
     cursor: pointer;
 }
 
@@ -87,7 +83,6 @@ a, li {
 
 .nav > li:hover {
     background: #1e7794;
-    /* text-decoration: underline; */
 }
 
 .drop ul {
