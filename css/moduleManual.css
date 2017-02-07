@@ -1,8 +1,17 @@
+/*
+    Author     : Dmitriy K.
+*/
+@import "fonts.css";
+
+html {
+    font-family: 'Conv_MyriadPro-Regular';
+    background-color: #eeeeee;
+}
 body {
     margin: 0;
     top: 0;
     background: #eee;
-    font-family: Tahoma;
+    /*font-family: Tahoma;*/
 }
 
 ul {

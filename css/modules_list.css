@@ -1,8 +1,14 @@
-html{
-    font-family: "Roboto", sans-serif;
+/*
+    Author     : Dmitriy K.
+*/
+@import url(fonts.css);
+
+html {
+    font-family: 'Conv_MyriadPro-Regular';
+    background-color: #eeeeee;
 }
 body{
-    background-color: #eeeeee;
+
 }
 h1{
     font-size: 2rem;

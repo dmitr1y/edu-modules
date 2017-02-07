@@ -2,9 +2,10 @@
     Created on : 27.06.2016, 14:33:01
     Author     : Dmitriy K.
 */
+@import url(fonts.css);
 
 html {
-    font-family: "Tahoma", sans-serif;
+    font-family: 'Conv_MyriadPro-Regular';
     background-color: #eeeeee;
 }
 
@@ -33,7 +34,7 @@ iframe {
 
 #menu {
     position: relative;
-    height: 50px;
+    height: 3.1em;
     background: #0099cc;
     display: inline-flex;
 }
@@ -41,8 +42,8 @@ iframe {
 #ul-main-menu {padding: 0;}
 
 .logo {
-    font-size: 1.5em;
-    padding: 0.4em 0 0 0.5em;
+    font-size: 1.8em;
+    padding: 0.3em 0 0 0.5em;
     width: 6em;
     color: white;
     cursor: pointer;
@@ -50,7 +51,7 @@ iframe {
 
 
 h1, a, li {
-    font-family: Roboto, sans-serif;
+
 }
 
 h1 {
@@ -68,6 +69,7 @@ a, li {
 
 .nav {
     margin: 0;
+    height: 3.1em;
 }
 
 .nav {
@@ -76,8 +78,10 @@ a, li {
 
 .nav > li {
     display: inline-block;
-    padding: 1em 18px;
+    padding: 0.8em 0.8em;
+    font-size: 1.1em;
     cursor: pointer;
+    overflow: hidden;
     transition: .3s linear;
 }
 
