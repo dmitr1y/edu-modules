@@ -1,15 +1,10 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
     Created on : 27.06.2016, 14:33:01
-    Author     : aser0
+    Author     : Dmitriy K.
 */
 
 html {
-    font-family: "Roboto", sans-serif;
+    font-family: "Tahoma", sans-serif;
 }
 
 body {
@@ -18,24 +13,7 @@ body {
     padding: 0;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
     overflow: hidden;
-}
-
-.header {
-    width: 100%;
-    margin: 0 auto;
-    top: 0;
-    position: absolute;
-    left: 0;
-    display: inline-table;
-    justify-content: space-between;
-    background-color: #1976D2;
-    border-radius: 2px;
-    -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54);
-    -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54);
-    box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.54);
 }
 
 #content {
@@ -59,24 +37,17 @@ iframe {
     display: inline-flex;
 }
 
-#ul-main-menu {
-
-}
-
-.fixed {
-    position: fixed;
-    top: -5px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-}
+#ul-main-menu {padding: 0;}
 
 .logo {
     font-size: 1.5em;
-    padding: 0.4em;
-    width: 100px;
+    padding: 0.3em 0 0 0.3em;
+    width: 6em;
     color: white;
-    height: 50px;
+    /* background-color: rgba(255, 255, 255, 0.38); */
+    /* overflow: hidden; */
+    /* height: 50px; */
+    cursor: pointer;
 }
 
 
@@ -99,7 +70,6 @@ a, li {
 
 .nav {
     margin: 0;
-
 }
 
 .nav {
@@ -155,10 +125,4 @@ a, li {
 
 .default {
     width: 100%;
-}
-
-.fixed {
-    position: fixed;
-    top: -10px;
-    margin: 0;
 }

@@ -1,5 +1,2 @@
 .idea/workspace.xml
-modules/StrassenVizi/.gitignore
-modules/StrassenVizi/.idea/
-
-/modules/StrassenVizi/LICENSE
+.idea/inspectionProfiles/

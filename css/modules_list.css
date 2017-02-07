@@ -1,8 +1,15 @@
 html{
     font-family: "Roboto", sans-serif;
 }
+body{
+    background-color: #eeeeee;
+}
 h1{
     font-size: 2rem;
+    text-transform: uppercase;
+}
+ul{
+    padding: 0;
 }
 
 .collection {
@@ -10,11 +17,11 @@ h1{
     border: 1px solid #e0e0e0;
     border-radius: 2px;
     overflow: hidden;
-    position: relative
+    position: relative;
 }
 
 .collection .collection-item {
-    background-color: #fafafa;
+    background-color: #ffffff;
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
@@ -52,7 +59,7 @@ h1{
 }
 
 .collection-item {
-    padding-left: 30px
+    /*     padding-left: 30px */
 }
 
 

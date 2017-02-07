@@ -1,8 +1,8 @@
 body{
     margin: 0;
     top: 0;
-    background: #bbdefb;
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    background: #eee;
+    font-family: Tahoma;
 }
 
 ul{
@@ -137,7 +137,7 @@ a:hover{
     text-decoration: underline;
 }
 h2{
-    background-color: #1976D2;
+    background-color: #3d9fec;
     padding: 0.3em;
     margin: 10px 0 0;
     color: white;
@@ -158,3 +158,5 @@ p{/* padding:10px; */padding-left: 10px;padding-right: 10px;}
     margin: auto;
     text-align: center;
 }
+
+h3{margin-left: 1em;padding: 0;/* margin: 0; */}
