@@ -36,6 +36,7 @@ iframe {
     height: 3.1em;
     background: #0099cc;
     display: inline-flex;
+    width: 100%;
 }
 
 #ul-main-menu {padding: 0;}
@@ -122,8 +123,4 @@ a, li {
     -webkit-transform: scale(1);
     transform: scale(1);
     background: #0d47a1;
-}
-
-.default {
-    width: 100%;
 }
