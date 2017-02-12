@@ -32,7 +32,7 @@ function gotoModuleWindow(url) {
 // }
 
 function resizeIframe() {
-    console.log("windows height: " + window.innerHeight);
+    // console.log("windows height: " + window.innerHeight);
     document.getElementById("content_frame").style.height = window.innerHeight - parseFloat(getComputedStyle(document.body).fontSize) * 3.1 + "px";
-    console.log("Iframe height: " + document.getElementById("content_frame").style.height);
+    // console.log("Iframe height: " + document.getElementById("content_frame").style.height);
 }
