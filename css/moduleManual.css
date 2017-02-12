@@ -70,18 +70,21 @@ li {
 
 .spoiler > input + label:after {
     content: "+";
-    margin-right: 10px;
+    margin-right: 0.5em;
     float: left;
-    font-family: monospace;
-    font-weight: bold;
+    /*! font-family: monospace; */
+    /*! font-weight: bold; */
+    font-size: 2em;
+    line-height: 0.6em;
 }
 
 .spoiler > input:checked + label:after {
     content: "-";
     float: left;
-    margin-right: 10px;
-    font-family: monospace;
-    font-weight: bold;
+    margin-right: 0.5em;
+    /*! font-family: monospace; */
+    /*! font-weight: bold; */
+    line-height: 0.6em;
 }
 
 .spoiler > input {
@@ -91,7 +94,7 @@ li {
 .spoiler > input + label, .spoiler > .spoiler_body {
     background: #1e7794;
     color: white !important;
-    padding: 5px 15px;
+    padding: 0.6em 0.5em;
     overflow: hidden;
     color: black;
     width: 100%;
@@ -109,11 +112,13 @@ li {
     font-weight: 100;
     color: black !important;
     background-color: #eeeeee;
+    width: 100%;
 }
 
 .spoiler > .spoiler_body {
     background: #fff;
     border-top: none;
+    width: 100%;
 }
 
 a {
@@ -145,6 +150,8 @@ p {
 
 .card-content {
     padding: 1em 1.5em 1.5em;
+    /*! width: 90%; */
+    overflow: hidden;
 }
 
 .card-head {
