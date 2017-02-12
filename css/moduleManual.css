@@ -124,7 +124,6 @@ h2 {
 
 p {
     padding-left: 0.625em;
-    /* padding-left: 10px; */
     padding-right: 0.625em;
 }
 
@@ -156,4 +155,8 @@ p {
 h3 {
     margin-left: 1em;
     padding: 0;
+}
+
+.intro-modules {
+    margin-left: 3em;
 }
