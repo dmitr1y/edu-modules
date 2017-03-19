@@ -130,12 +130,14 @@ a, li {
     margin-left: auto;
     margin-right: 1em;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
 }
 
 .social {
     background: white;
     -webkit-mask-size: contain;
+    mask-size: contain;
     width: 2.4em;
     height: 2.4em;
     cursor: pointer;
@@ -147,4 +149,5 @@ a, li {
 
 #youtube {
     -webkit-mask-image: url(../img/icons/youtube.svg);
+    mask-image: url(../img/icons/youtube.svg);
 }
