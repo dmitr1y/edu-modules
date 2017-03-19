@@ -135,19 +135,18 @@ a, li {
 }
 
 .social {
-    background: white;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+    background-size: contain;
     width: 2.4em;
     height: 2.4em;
     cursor: pointer;
+    transition: .3s linear;
 }
 
 .social:hover{
-    background: #1e7794;
+    -webkit-filter: invert(100%); filter: invert(100%);
+    transition: .3s linear;
 }
 
 #youtube {
-    -webkit-mask-image: url(../img/icons/youtube.svg);
-    mask-image: url(../img/icons/youtube.svg);
+    background-image: url("../img/icons/youtube.png");
 }
